@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/0bc40876b7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="header">
+   <div class="container">
+    <h2 class="logo">FULCRUM</h2>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+      <i class="fas fa-align-justify"></i>
+    </label>
+
+    <ul class="menu">
+      <a href="#">Пошук</a>
+      <a href="#">Головна</a>
+      <a href="#">Увійти</a>
+      <a href="#">Зареєструватися</a>
+      <a href="#"><i class="fab fa-telegram"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <label for="chk" class="hide-menu-btn">
+        <i class="fas fa-times"></i>
+      </label>
+    </ul>
+    </div>
+  </div>
+   
+   <div class="content">
+       <div class="container">
+           <p class="mainContentP">Наша мета - об’єднати креативних людей</p>
+           
+           <p class="infoProjContent">Цей проект призначений для вільного розповсюдження текстової інформації (книги, вірші, статті тощо).</p>
+           
+           
+            <ul class="portfolio-grid" id="works">
+
+                <li v-for="work in works" class="grid-item">
+                  <img :src="work.image">
+                    <a href="work.html">  
+                      <div class="grid-hover">
+                        <h1>{{work.name}}</h1>
+                        <p>{{work.author}}</p>
+                      </div>
+                    </a>  
+                </li>
+
+            </ul>
+       </div>
+   </div>
+   
+   <div class="footer">
+       <div class="container">
+           <p>© Copyright 2019 Fulcrum.com. All Rights Reserved.</p>
+       </div>
+   </div>
+    
+    
+<!-- SCRIPT   -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/works.js"></script>
+</body>
+</html>

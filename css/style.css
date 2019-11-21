@@ -1,0 +1,269 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900,100,200);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+  font-size:14px;
+  font-weight: 400;
+}
+
+/* HEADER */
+
+.container{
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.header{
+  height: 100px;
+  background: #34495e;
+  padding: 0 20px;
+  color: #fff;
+}
+.logo{
+  line-height: 100px;
+  float: left;
+  text-transform: uppercase;
+  font-size: 28px;
+
+}
+
+.menu{
+  float: right;
+  line-height: 100px;
+}
+.menu a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 13px;
+  transition: 0.4s;
+  font-size: 18px;
+  font-weight: 600;
+}
+.menu a i{
+    font-size: 22px;
+    font-weight: 500;
+}
+.show-menu-btn,.hide-menu-btn{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.show-menu-btn{
+  float: right;
+}
+.show-menu-btn i{
+  line-height: 100px;
+}
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+  color: #3498db;
+}
+
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+/* CONTENT */
+
+.content{
+    position: relative;
+    padding-bottom: 3%;
+}
+
+.mainContentP{
+    padding-top: 5%;
+    font-size: 43px;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+    line-height: 70px;
+    width: 40%;
+    padding-left: 2.5%;
+}
+
+.infoProjContent{
+  font-size:13px;
+  color:#797979;
+  margin-top:20px;
+  font-weight:400;
+  line-height:22px;
+  letter-spacing:1px;
+  width:100%;
+  padding-left: 2.5%;
+}
+
+/*
+.mainContentP{
+  font-size:43px;
+  text-transform:uppercase;
+  color:#000000;
+  font-weight:900;
+  line-height:70px;
+}
+*/
+
+/* 
+************************
+GRID CONTENT 
+************************
+*/
+
+.portfolio-grid{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-around; 
+  overflow:hidden;
+}
+
+li.grid-item{
+  width: 33%;
+  position:relative;
+  float:left;
+  padding:15px;
+  
+}
+
+.grid-hover{
+  position: absolute;
+  width:360px;
+  height: 100%;
+  top:0;
+  background: white;
+  z-index: 2;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in; 
+}
+
+.grid-hover:hover{
+  opacity: 0.9;
+}
+
+.grid-hover h1{
+  font-size:23px;
+  bottom:80px;
+  left:40px;
+  position:absolute;
+  text-transform:uppercase;
+  color:#000000;
+  letter-spacing:1px;
+  font-weight:900;
+  line-height:50px;
+}
+
+.grid-hover p{
+  font-size:13px;
+  bottom:40px;
+  left:40px;
+  position:absolute;
+  color:#686868;
+  letter-spacing:1px;
+  font-weight:400;
+  line-height:50px;
+}
+
+li.grid-item img{
+  width:360px;
+}
+
+/* 
+***********************
+FOOTER
+***********************
+*/
+
+.footer{
+    background-color: #f1f1f1;
+    min-height: 80px;
+}
+
+.footer p{
+    color: #686868;
+    font-size: 12px;
+    text-align: left;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 2.5%;
+}
+
+/* MEDIA */
+
+@media screen and (max-width:1090px){
+    .portfolio-grid{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: space-around;
+/*      flex-direction: column;*/
+
+    }
+    
+    li.grid-item{
+      width: 49%;  
+    }
+    
+}
+
+@media screen and (max-width:800px) {
+  .show-menu-btn,.hide-menu-btn{
+    display: block;
+  }
+  .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+  }
+  .menu a{
+    display: block;
+    padding: 20px;
+  }
+  .hide-menu-btn{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+  }
+    .portfolio-grid{
+      display: block;
+      margin: 0 auto;
+/*      flex-direction: column;*/
+
+    }
+    li.grid-item{
+      width: 100%;
+        
+    }
+    
+}
+
