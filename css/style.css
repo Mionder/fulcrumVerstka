@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900,100,200);
-
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 *{
     padding: 0;
     margin: 0;
@@ -17,6 +17,9 @@ body{
   font-weight: 400;
 }
 
+i{
+  font-family: fontawesome !important;
+}
 /* HEADER */
 
 .container{
@@ -28,33 +31,45 @@ body{
 
 .header{
   height: 100px;
-  background: #34495e;
+  background: #2b2b2b;
   padding: 0 20px;
   color: #fff;
+
 }
 .logo{
   line-height: 100px;
   float: left;
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 36px;
 
 }
 
+.linksHeader{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.socialHeader{
+  display: flex;
+  justify-content: center;
+}
+
 .menu{
-  float: right;
+  display: flex;
+  justify-content: space-around;
   line-height: 100px;
 }
 .menu a{
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0 13px;
+  padding: 0 30%;
   transition: 0.4s;
-  font-size: 18px;
+  font-size: 28px;
   font-weight: 600;
 }
 .menu a i{
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 500;
 }
 .show-menu-btn,.hide-menu-btn{
@@ -86,13 +101,14 @@ body{
 .content{
     position: relative;
     padding-bottom: 3%;
+    background: #2b2b2b;
 }
 
 .mainContentP{
     padding-top: 5%;
     font-size: 43px;
     font-weight: 900;
-    color: #000;
+    color: #fff;
     text-transform: uppercase;
     line-height: 70px;
     width: 40%;
@@ -119,6 +135,37 @@ body{
   line-height:70px;
 }
 */
+
+/* SUBHEADER */
+
+.subHeader{
+  background: #2b2b2b;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+.navSubHeader{
+
+  display: flex;
+  justify-content: center;
+}
+
+.subHeaderCategory,
+.subHeaderKind,
+.subHeaderAuthor,
+.subHeaderSort{
+  background-color: #f2f2f2;
+  color: #2b2b2b;
+  font-size: 1.7rem;
+  border-radius: 5%;
+  text-align: center;
+  padding: 0.5% 2% 0.5% 2%;
+  color:#2b2b2b;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 3.5%;
+}
+
 
 /* 
 ************************
@@ -195,17 +242,28 @@ FOOTER
 */
 
 .footer{
-    background-color: #f1f1f1;
+    background-color: #1b1b1b;
     min-height: 80px;
+    padding-top: 2%;
+    padding-bottom: 1.5%;
+}
+
+.bookFooter{
+  background: url(../img/book.png)center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 111px;
+  width: 191px;
+  margin: 0 auto;
+
 }
 
 .footer p{
-    color: #686868;
-    font-size: 12px;
-    text-align: left;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 2.5%;
+    padding-top: 0.5%;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #f2f2f2;
 }
 
 /* MEDIA */
@@ -262,7 +320,14 @@ FOOTER
     }
     li.grid-item{
       width: 100%;
-        
+      display: flex;
+      justify-content: center;  
+    }
+
+    .grid-hover{
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
     
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/0bc40876b7.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body> 
 
   <div class="header">
    <div class="container">
@@ -19,17 +19,35 @@
     </label>
 
     <ul class="menu">
-      <a href="#">Пошук</a>
-      <a href="#">Головна</a>
-      <a href="#">Увійти</a>
-      <a href="#">Зареєструватися</a>
-      <a href="#"><i class="fab fa-telegram"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+      <div class="linksHeader">
+          <a href="#"><i class="fas fa-search"></i></a>
+          <a href="#"><i class="fas fa-user"></i></a>
+          <a href="#"><i class="fas fa-plus"></i></a>
+          <a href="#"><i class="fas fa-home"></i></a>
+      </div>
+
+      <div class="socialHeader">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+
+      <!-- <a href="#"><i class="fab fa-telegram"></i></a> -->
+
       <label for="chk" class="hide-menu-btn">
         <i class="fas fa-times"></i>
       </label>
     </ul>
+    </div>
+  </div>
+
+  <div class="subHeader">
+    <div class="container">
+      <div class="navSubHeader">
+        <div class="subHeaderCategory">Category</div>
+        <div class="subHeaderKind">Kind</div>
+        <div class="subHeaderAuthor">Author</div>
+        <div class="subHeaderSort">Sort</div>
+      </div>
     </div>
   </div>
    
@@ -58,7 +76,8 @@
    
    <div class="footer">
        <div class="container">
-           <p>© Copyright 2019 Fulcrum.com. All Rights Reserved.</p>
+           <div class="bookFooter"></div>
+           <p>fulcrum</p>
        </div>
    </div>
     
