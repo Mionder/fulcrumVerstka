@@ -50,31 +50,40 @@
       </div>
     </div>
   </div>
-   
-   <div class="content">
-       <div class="container">
-           <p class="mainContentP">Наша мета - об’єднати креативних людей</p>
-           
-           <p class="infoProjContent">Цей проект призначений для вільного розповсюдження текстової інформації (книги, вірші, статті тощо).</p>
-           
-           
-            <ul class="portfolio-grid" id="works">
+   <div class="clear"></div>  
+     <div class="profile" id="ajax-content">
+          <div class="text-intro" id="site-type">
+             <div class="topProfileBar">
+                  <div class="profilePhoto"></div>
+                  <h2>Mionder</h2>
+              </div>
+              
+              <div class="fullContentProfile">
+                  <div class="leftContentProfile">
+                      <p>Моя сторінка</p>
+                      <p>Моя творчість</p>
+                      <p>Вихід</p>
+                  </div>
+                  
+                  <div class="rightContentProfile">
+                      <div class="emailContentProfile">
+                          <p class="stand">Моя поштова скринька: <span>example@gmail.com</span></p>
+                      </div>
+                      
+                      <div class="telephoneContentProfile">
+                          <p class="stand">Мій номер телефону: <span>+38 066 66 66 666</span></p>
+                      </div>
+                      
+                      <div class="birthdayContentProfile">
+                          <p class="stand">День народження: <span>01.01.2000</span></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+     
+     
 
-                <li v-for="work in works" class="grid-item">
-                   <div class="items_wrap">
-                          <img :src="work.image">
-                            <a href="work.html">  
-                              <div class="grid-hover">
-                                <h1>{{work.name}}</h1>
-                                <p>{{work.author}}</p>
-                              </div>
-                            </a>  
-                   </div>
-                </li>
-
-            </ul>
-       </div>
-   </div>
    
    <div class="footer">
        <div class="container">
